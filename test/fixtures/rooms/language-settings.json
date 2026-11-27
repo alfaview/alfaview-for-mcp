@@ -1,0 +1,6 @@
+{
+  "transcriptionEnabled": true,
+  "transcriptionType": "simple_transcription",
+  "defaultSpokenLanguage": "de-DE",
+  "targetTranscriptionLanguages": ["en-US", "fr-FR"]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "@alfaview-integrations/alfaview-for-mcp",
+  "version": "0.4.0",
+  "description": "A Model Context Protocol (MCP) server for alfaview rooms, guest links, meetings and attendance.",
+  "keywords": [
+    "alfaview",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "video-conferencing",
+    "ai-agents"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/alfaview/alfaview-for-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/alfaview/alfaview-for-mcp/issues"
+  },
+  "mcpName": "com.alfaview/alfaview-for-mcp",
+  "author": {
+    "name": "alfaview Video Conferencing Systems GmbH & Co. KG",
+    "email": "support@alfaview.com",
+    "url": "https://www.alfaview.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alfaview/alfaview-for-mcp.git"
+  },
+  "type": "module",
+  "bin": {
+    "alfaview-mcp": "dist/main.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "CHANGELOG.md",
+    "TRADEMARKS.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test --test-reporter=spec --test-timeout=60000 --experimental-test-coverage --test-coverage-include='src/**/*.ts' --test-coverage-exclude='src/main.ts' --test-coverage-exclude='src/shared/**' --test-coverage-lines=99 --test-coverage-branches=90 --test-coverage-functions=95 'test/**/*.test.ts'",
+    "start": "node dist/main.js",
+    "docs:tools": "node scripts/tools-doc.ts",
+    "eval": "node eval/main.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.4.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.4.0",
+    "@types/node": "^22.0.0",
+    "typescript": "~6.0.3"
+  }
+}

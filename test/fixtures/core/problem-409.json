@@ -1,0 +1,5 @@
+{
+  "title": "Conflict",
+  "status": 409,
+  "detail": "Permissions for this participant already exist."
+}

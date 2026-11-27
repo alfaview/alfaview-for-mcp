@@ -1,0 +1,50 @@
+[
+  {
+    "from": "2026-09-01T00:00:00Z",
+    "to": "2026-09-02T00:00:00Z",
+    "rooms": { "activeCount": 4, "sessionCount": 17, "roomOnlineSeconds": 36900, "usersOnlineSeconds": 61200 },
+    "meetings": { "activeCount": 1, "sessionCount": 3, "roomOnlineSeconds": 3600, "usersOnlineSeconds": 9000 }
+  },
+  {
+    "from": "2026-09-02T00:00:00Z",
+    "to": "2026-09-03T00:00:00Z",
+    "rooms": { "activeCount": 5, "sessionCount": 21, "roomOnlineSeconds": 41220, "usersOnlineSeconds": 70380 },
+    "meetings": { "activeCount": 2, "sessionCount": 9, "roomOnlineSeconds": 7260, "usersOnlineSeconds": 25140 }
+  },
+  {
+    "from": "2026-09-03T00:00:00Z",
+    "to": "2026-09-04T00:00:00Z",
+    "rooms": { "activeCount": 3, "sessionCount": 12, "roomOnlineSeconds": 25200, "usersOnlineSeconds": 43500 },
+    "meetings": { "activeCount": 0, "sessionCount": 0, "roomOnlineSeconds": 0, "usersOnlineSeconds": 0 }
+  },
+  {
+    "from": "2026-09-04T00:00:00Z",
+    "to": "2026-09-05T00:00:00Z",
+    "rooms": { "activeCount": 5, "sessionCount": 19, "roomOnlineSeconds": 39000, "usersOnlineSeconds": 66600 },
+    "meetings": { "activeCount": 1, "sessionCount": 41, "roomOnlineSeconds": 5400, "usersOnlineSeconds": 208800 }
+  },
+  {
+    "from": "2026-09-05T00:00:00Z",
+    "to": "2026-09-06T00:00:00Z",
+    "rooms": { "activeCount": 0, "sessionCount": 0, "roomOnlineSeconds": 0, "usersOnlineSeconds": 0 },
+    "meetings": { "activeCount": 0, "sessionCount": 0, "roomOnlineSeconds": 0, "usersOnlineSeconds": 0 }
+  },
+  {
+    "from": "2026-09-06T00:00:00Z",
+    "to": "2026-09-07T00:00:00Z",
+    "rooms": { "activeCount": 1, "sessionCount": 1, "roomOnlineSeconds": 89, "usersOnlineSeconds": 90 },
+    "meetings": { "activeCount": 0, "sessionCount": 0, "roomOnlineSeconds": 0, "usersOnlineSeconds": 0 }
+  },
+  {
+    "from": "2026-09-07T00:00:00Z",
+    "to": "2026-09-08T00:00:00Z",
+    "rooms": { "activeCount": 4, "sessionCount": 15, "roomOnlineSeconds": 33300, "usersOnlineSeconds": 55800 },
+    "meetings": { "activeCount": 1, "sessionCount": 4, "roomOnlineSeconds": 4500, "usersOnlineSeconds": 12600 }
+  },
+  {
+    "from": "2026-09-08T00:00:00Z",
+    "to": "2026-09-08T12:00:00Z",
+    "rooms": { "activeCount": 3, "sessionCount": 8, "roomOnlineSeconds": 14400, "usersOnlineSeconds": 25200 },
+    "meetings": { "activeCount": 0, "sessionCount": 0, "roomOnlineSeconds": 0, "usersOnlineSeconds": 0 }
+  }
+]

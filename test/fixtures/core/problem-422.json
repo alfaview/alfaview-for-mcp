@@ -1,0 +1,15 @@
+{
+  "title": "Unprocessable Entity",
+  "status": 422,
+  "detail": "validation failed",
+  "errors": [
+    {
+      "message": "expected string to be RFC 5322 email",
+      "location": "body.create[0].emailAddress"
+    },
+    {
+      "message": "expected value to be one of \"de-DE, en-US\"",
+      "location": "body.create[0].locale"
+    }
+  ]
+}

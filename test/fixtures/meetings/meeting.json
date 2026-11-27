@@ -1,0 +1,22 @@
+{
+  "id": "7e9a1c3d-5b2f-5a4e-8c6d-22f0a1b2c3d4",
+  "title": "Quarterly Review",
+  "start": "2026-10-12T08:00:00Z",
+  "end": "2026-10-12T09:00:00Z",
+  "timezone": "Europe/Berlin",
+  "state": "scheduled",
+  "agenda": "Portfolio review and next steps.",
+  "earlyAccessMinutes": 10,
+  "canJoin": false,
+  "canJoinAfter": "2026-10-12T07:50:00Z",
+  "roomAvailable": false,
+  "createdAt": "2026-09-25T10:00:00Z",
+  "createdBy": "6c1d9e4f-2a7b-5c3d-9e8f-0a1b2c3d4e5f",
+  "guestLinks": null,
+  "groupLinks": {
+    "e3f4a5b6-c7d8-5e9f-8a0b-1c2d3e4f5a6b": "https://app.alfaview.com/#/join/0123456789ABCDEFGHIJKLMNOP/7e9a1c3d-5b2f-5a4e-8c6d-22f0a1b2c3d4/Qw3eR5tY7uI9oP1aS2dF4gH6jK8lZ0xC",
+    "c1a2b3c4-d5e6-5f70-8192-a3b4c5d6e7f8": "https://app.alfaview.com/#/join/0123456789ABCDEFGHIJKLMNOP/7e9a1c3d-5b2f-5a4e-8c6d-22f0a1b2c3d4/Mx8kP2qR7tV9wY3zA5bC1dE4fG6hJ0kL",
+    "f4a5b6c7-d8e9-5f0a-9b1c-2d3e4f5a6b7c": "https://app.alfaview.com/#/join/0123456789ABCDEFGHIJKLMNOP/7e9a1c3d-5b2f-5a4e-8c6d-22f0a1b2c3d4/Zx1cV3bN5mQ7wE9rT0yU2iO4pA6sD8fG",
+    "d2b3c4d5-e6f7-5081-9a2b-c3d4e5f6a7b8": "https://app.alfaview.com/#/join/0123456789ABCDEFGHIJKLMNOP/7e9a1c3d-5b2f-5a4e-8c6d-22f0a1b2c3d4/Vb6nM8qW1eR3tY5uI7oP9aS0dF2gH4jK"
+  }
+}

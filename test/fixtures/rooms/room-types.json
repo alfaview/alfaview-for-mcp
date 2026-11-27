@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Webinar",
+    "maxActiveParticipants": 50,
+    "maxSpectatorOnlyParticipants": 450,
+    "maxSubRooms": 10,
+    "total": 2,
+    "used": 2
+  },
+  {
+    "name": "",
+    "maxActiveParticipants": 0,
+    "maxSpectatorOnlyParticipants": 0,
+    "maxSubRooms": 0,
+    "total": 0,
+    "used": 3
+  },
+  {
+    "name": "Advisory",
+    "maxActiveParticipants": 10,
+    "maxSpectatorOnlyParticipants": 0,
+    "maxSubRooms": 5,
+    "total": 10,
+    "used": 4
+  }
+]

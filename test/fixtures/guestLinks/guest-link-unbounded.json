@@ -1,0 +1,17 @@
+{
+  "id": "7a1b2c3d-4e5f-5a6b-9c7d-14e2f3a4b5c6",
+  "userId": "7a1b2c3d-4e5f-5a6b-9c7d-18e2f3a4b5c6",
+  "roomId": "0b7c5d2e-91a4-5f3b-8e27-0f4a6c9d1e22",
+  "createdBy": "6c1d9e4f-2a7b-5c3d-9e8f-0a1b2c3d4e5f",
+  "createdAt": "2026-09-20T07:15:30.123Z",
+  "permissionGroupId": "f4a5b6c7-d8e9-5f0a-9b1c-2d3e4f5a6b7c",
+  "accessKey": "Zx9cV7bN5mQ3wE1rT8yU6iO4pA2sD0fG",
+  "emailAddress": "max.mustermann@example.com",
+  "locale": "en-US",
+  "origin": "Public API",
+  "dialInAllowed": true,
+  "dialInCode": "482915",
+  "joinUrl": "https://app.alfaview.com/#/join/0123456789ABCDEFGHIJKLMNOP/0b7c5d2e-91a4-5f3b-8e27-0f4a6c9d1e22/Zx9cV7bN5mQ3wE1rT8yU6iO4pA2sD0fG",
+  "validFrom": "0001-01-01T00:00:00Z",
+  "validUntil": "0001-01-01T00:00:00Z"
+}

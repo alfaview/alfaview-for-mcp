@@ -1,0 +1,72 @@
+{
+  "name": "alfaview-mcp",
+  "version": "0.4.0",
+  "description": "The plugin runs the alfaview MCP server and adds a skill for the tasks of an alfaview company.",
+  "author": {
+    "name": "alfaview Video Conferencing Systems GmbH & Co. KG",
+    "email": "support@alfaview.com",
+    "url": "https://www.alfaview.com"
+  },
+  "homepage": "https://github.com/alfaview/alfaview-for-mcp",
+  "repository": "https://github.com/alfaview/alfaview-for-mcp",
+  "license": "MIT",
+  "keywords": ["alfaview", "video conferencing", "mcp"],
+  "userConfig": {
+    "company_id": {
+      "type": "string",
+      "title": "Company ID",
+      "description": "The ID of your alfaview company.",
+      "required": true
+    },
+    "client_id": {
+      "type": "string",
+      "title": "Client ID",
+      "description": "The client ID of your alfaview API key.",
+      "required": true
+    },
+    "api_key": {
+      "type": "string",
+      "title": "API key",
+      "description": "Your alfaview API key. Claude Code keeps it in its credential store, not in settings.json.",
+      "required": true,
+      "sensitive": true
+    },
+    "access_level": {
+      "type": "string",
+      "title": "Access level",
+      "description": "The tools that the server offers: read, standard or manage.",
+      "options": ["read", "standard", "manage"],
+      "default": "standard"
+    },
+    "personal_data": {
+      "type": "string",
+      "title": "Personal data",
+      "description": "With include, the results give every value. With omit, they leave out names, email addresses and the texts that people write about a meeting or a booking.",
+      "options": ["include", "omit"],
+      "default": "include"
+    },
+    "time_zone": {
+      "type": "string",
+      "title": "Time zone",
+      "description": "The time zone of the times, the meetings and the emails, as an IANA name such as America/New_York. Empty: Europe/Berlin, also on a computer in another time zone.",
+      "default": ""
+    }
+  },
+  "mcpServers": {
+    "alfaview": {
+      "command": "npx",
+      "args": ["-y", "@alfaview-integrations/alfaview-for-mcp@0.4.0"],
+      "env": {
+        "ALFAVIEW_COMPANY_ID": "${user_config.company_id}",
+        "ALFAVIEW_CLIENT_ID": "${user_config.client_id}",
+        "ALFAVIEW_API_KEY": "${user_config.api_key}",
+        "ALFAVIEW_ACCESS_LEVEL": "${user_config.access_level}",
+        "ALFAVIEW_PERSONAL_DATA": "${user_config.personal_data}",
+        "ALFAVIEW_TIME_ZONE": "${user_config.time_zone}",
+        "ALFAVIEW_TOOLS": "",
+        "ALFAVIEW_API_BASE_URL": "",
+        "ALFAVIEW_DANGEROUSLY_ALLOW_FULL_ACCESS": ""
+      }
+    }
+  }
+}

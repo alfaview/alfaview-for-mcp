@@ -1,0 +1,5 @@
+{
+  "title": "Forbidden",
+  "status": 403,
+  "detail": "missing room join permissions"
+}

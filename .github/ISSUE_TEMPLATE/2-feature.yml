@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose a new feature or a change of the server.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Never paste an API key, an access token or a configuration file into this form. Other people can read each issue.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What do you want to do, and what stops you today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Your proposal
+      description: What the server does after the change.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Other ways that you tried
+      description: The workarounds that you use today, and why they are not enough.

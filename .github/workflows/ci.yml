@@ -1,0 +1,61 @@
+# Runs the gates of the package on each push and pull request. publish.yml
+# runs the same gates before it publishes a version.
+#
+# This repository is a copy of the source repository of alfaview. A pull
+# request is not merged here: when a maintainer accepts the change, the
+# maintainer applies it in the source repository, and a later release brings it
+# here. CONTRIBUTING.md says more.
+#
+# Every action is pinned to a full commit SHA, with its version in a comment.
+
+name: CI
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+
+permissions:
+  contents: read
+
+# A new run for the same branch or pull request stops the run before it.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gates:
+    name: Gates
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          # Node 22: the oldest major version that engines of package.json
+          # allows. setup-node takes the 22.x of the runner image, or the
+          # newest 22.x when the image has none. The tests need 22.18 or
+          # later.
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install the dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Pack
+        run: npm pack

@@ -1,0 +1,16 @@
+{
+  "id": "8d4e2f1a-6c3b-5a9e-b2d7-c75e1f0a3b94",
+  "roomId": "0b7c5d2e-91a4-5f3b-8e27-0f4a6c9d1e22",
+  "description": "Open house",
+  "permissionGroupId": "d2b3c4d5-e6f7-5081-9a2b-c3d4e5f6a7b8",
+  "createdBy": "6c1d9e4f-2a7b-5c3d-9e8f-0a1b2c3d4e5f",
+  "createdAt": "2026-09-25T10:00:00Z",
+  "joinLink": "https://app.alfaview.com/#/join/0123456789ABCDEFGHIJKLMNOP/0b7c5d2e-91a4-5f3b-8e27-0f4a6c9d1e22/Pq4wE6rT8yU0iO2pA3sD5fG7hJ9kL1zX",
+  "joinUrl": "https://app.alfaview.com/#/join/0123456789ABCDEFGHIJKLMNOP/0b7c5d2e-91a4-5f3b-8e27-0f4a6c9d1e22/Pq4wE6rT8yU0iO2pA3sD5fG7hJ9kL1zX",
+  "accessKey": "Pq4wE6rT8yU0iO2pA3sD5fG7hJ9kL1zX",
+  "origin": "Zapier",
+  "dialInAllowed": false,
+  "dialInCode": "",
+  "validFrom": "2026-10-07T08:45:00Z",
+  "validUntil": "2026-10-07T10:15:00Z"
+}

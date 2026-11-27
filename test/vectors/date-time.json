@@ -1,0 +1,1099 @@
+{
+  "about": "Date and time vectors. Each entry of dateTimes is a case of parseDateTime(input, label, zone), and each entry of timeZones is a case of the reader of a time zone.",
+  "label": "Start",
+  "dateTimes": [
+    {
+      "input": "2026-10-27 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "ISO with a space, winter time (CET, +01:00)"
+    },
+    {
+      "input": "2026-10-27T10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "ISO with T, no seconds"
+    },
+    {
+      "input": "2026-10-27T10:00:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "ISO with seconds"
+    },
+    {
+      "input": "2026-10-27T10:00:30",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:30.000Z",
+      "local": "2026-10-27 10:00:30 Europe/Berlin",
+      "note": "seconds that are not zero show in the local text"
+    },
+    {
+      "input": "2026-10-27T10:00:00.5",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.500Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "one digit of fraction"
+    },
+    {
+      "input": "2026-10-27T10:00:00.123456789",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.123Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "nine digits of fraction are cut to milliseconds, not rounded"
+    },
+    {
+      "input": "2026-07-15 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-07-15T08:00:00.000Z",
+      "local": "2026-07-15 10:00 Europe/Berlin",
+      "note": "summer time (CEST, +02:00)"
+    },
+    {
+      "input": "2026-10-27t10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "lowercase t"
+    },
+    {
+      "input": "  2026-10-27   10:00  ",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "spaces around and inside are ignored"
+    },
+    {
+      "input": "2026-10-27T9:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T08:00:00.000Z",
+      "local": "2026-10-27 09:00 Europe/Berlin",
+      "note": "one-digit hour"
+    },
+    {
+      "input": "2026-10-27T10:00:00Z",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T10:00:00.000Z",
+      "local": "2026-10-27 11:00 Europe/Berlin",
+      "note": "Z: the local text shows the Berlin time"
+    },
+    {
+      "input": "2026-10-27T10:00:00z",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T10:00:00.000Z",
+      "local": "2026-10-27 11:00 Europe/Berlin",
+      "note": "lowercase z"
+    },
+    {
+      "input": "2026-10-27T10:00:00+01:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "offset with a colon"
+    },
+    {
+      "input": "2026-10-27T10:00:00+0100",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "offset without a colon"
+    },
+    {
+      "input": "2026-10-27T10:00:00+01",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "offset with hours only"
+    },
+    {
+      "input": "2026-10-27T10:00:00-05:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T15:00:00.000Z",
+      "local": "2026-10-27 16:00 Europe/Berlin",
+      "note": "the incident of 2026-09-25: the local text shows the shift at once"
+    },
+    {
+      "input": "2026-10-27 10:00:00 +01:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "a space before the offset"
+    },
+    {
+      "input": "2026-10-27T10:00:00.000000Z",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T10:00:00.000Z",
+      "local": "2026-10-27 11:00 Europe/Berlin",
+      "note": "six digits of fraction, as Calendly sends"
+    },
+    {
+      "input": "2026-10-27T10:00+05:30",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T04:30:00.000Z",
+      "local": "2026-10-27 05:30 Europe/Berlin",
+      "note": "offset with minutes"
+    },
+    {
+      "input": "2026-10-27T10:00:00-00:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T10:00:00.000Z",
+      "local": "2026-10-27 11:00 Europe/Berlin",
+      "note": "-00:00 is UTC"
+    },
+    {
+      "input": "2026-10-27T10:00:00+24:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 2026-10-27T10:00:00+24:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "offset above +14:00"
+    },
+    {
+      "input": "2026-10-27T10:00:00+01:60",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 2026-10-27T10:00:00+01:60 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "offset minute above 59"
+    },
+    {
+      "input": "27.10.2026 10:00:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "the Google Sheets value of the incident"
+    },
+    {
+      "input": "27.10.2026 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "dots, no seconds"
+    },
+    {
+      "input": "7.1.2026 9:05",
+      "zone": "Europe/Berlin",
+      "utc": "2026-01-07T08:05:00.000Z",
+      "local": "2026-01-07 09:05 Europe/Berlin",
+      "note": "one-digit day, month and hour"
+    },
+    {
+      "input": "27.10.2026, 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "a comma after the date, as toLocaleString('de-DE') writes it"
+    },
+    {
+      "input": "27.10.2026 10:00:00.250",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.250Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "dots with a fraction"
+    },
+    {
+      "input": "27.10.26 10:00",
+      "zone": "Europe/Berlin",
+      "error": "two_digit_year",
+      "message": "Start: 27.10.26 has a two-digit year. Write the year with four digits, for example 27.10.2026.",
+      "note": "two-digit year refused"
+    },
+    {
+      "input": "27.10.2026",
+      "zone": "Europe/Berlin",
+      "error": "missing_time",
+      "message": "Start: 27.10.2026 has a date but no time. Add the time, for example 27.10.2026 10:00.",
+      "note": "a date without a time"
+    },
+    {
+      "input": "31.02.2026 10:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 31.02.2026 10:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "no 31 February"
+    },
+    {
+      "input": "27.10.2026 10:00 +01:00",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "an offset only on the ISO form"
+    },
+    {
+      "input": "27.10.2026 24:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 27.10.2026 24:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "24:00 refused"
+    },
+    {
+      "input": "27.10.2026 10:60",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 27.10.2026 10:60 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "minute 60"
+    },
+    {
+      "input": "27.10.2026 10:00:60",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 27.10.2026 10:00:60 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "second 60, no leap seconds"
+    },
+    {
+      "input": "27/10/2026 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "day first: the first part is above 12"
+    },
+    {
+      "input": "10/27/2026 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "month first: the second part is above 12"
+    },
+    {
+      "input": "27/10/2026, 10:00:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "day first with a comma, as toLocaleString('en-GB') writes it"
+    },
+    {
+      "input": "10/27/2026 10:00:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "month first with seconds"
+    },
+    {
+      "input": "05/10/2026 10:00",
+      "zone": "Europe/Berlin",
+      "error": "ambiguous_date",
+      "message": "Start: 05/10/2026 is ambiguous. Use 05.10.2026 or 2026-10-05.",
+      "note": "both parts 12 or less"
+    },
+    {
+      "input": "5/10/2026 10:00",
+      "zone": "Europe/Berlin",
+      "error": "ambiguous_date",
+      "message": "Start: 5/10/2026 is ambiguous. Use 05.10.2026 or 2026-10-05.",
+      "note": "one-digit part, the suggestion has two digits"
+    },
+    {
+      "input": "12/12/2026 10:00",
+      "zone": "Europe/Berlin",
+      "error": "ambiguous_date",
+      "message": "Start: 12/12/2026 is ambiguous. Use 12.12.2026 or 2026-12-12.",
+      "note": "equal parts are refused too"
+    },
+    {
+      "input": "05/10/2026",
+      "zone": "Europe/Berlin",
+      "error": "ambiguous_date",
+      "message": "Start: 05/10/2026 is ambiguous. Use 05.10.2026 or 2026-10-05.",
+      "note": "ambiguity before the missing time"
+    },
+    {
+      "input": "13/13/2026 10:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 13/13/2026 10:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "both parts above 12"
+    },
+    {
+      "input": "31/04/2026 10:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 31/04/2026 10:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "no 31 April"
+    },
+    {
+      "input": "27/10/26 10:00",
+      "zone": "Europe/Berlin",
+      "error": "two_digit_year",
+      "message": "Start: 27/10/26 has a two-digit year. Write the year with four digits, for example 27.10.2026.",
+      "note": "two-digit year with slashes"
+    },
+    {
+      "input": "27/10/2026",
+      "zone": "Europe/Berlin",
+      "error": "missing_time",
+      "message": "Start: 27/10/2026 has a date but no time. Add the time, for example 27/10/2026 10:00.",
+      "note": "slash date without a time"
+    },
+    {
+      "input": "1793091600",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "ten digits: seconds"
+    },
+    {
+      "input": "1793091600000",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "thirteen digits: milliseconds"
+    },
+    {
+      "input": "1793091600123",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.123Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "milliseconds that are not zero"
+    },
+    {
+      "input": "1793091600",
+      "zone": "UTC",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 09:00 UTC",
+      "note": "the zone changes only the local text of Unix time"
+    },
+    {
+      "input": "179309160",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "nine digits"
+    },
+    {
+      "input": "17930916000",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "eleven digits"
+    },
+    {
+      "input": "20261027",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "a compact date is not Unix time"
+    },
+    {
+      "input": "0793091600",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "a leading zero"
+    },
+    {
+      "input": "1793091600.5",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.500Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "Unix seconds with a fraction, as $now.toSeconds() gives"
+    },
+    {
+      "input": "-1793091600",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "negative Unix time"
+    },
+    {
+      "input": "46322.41667",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "a spreadsheet serial number"
+    },
+    {
+      "input": "2026-03-29 01:59",
+      "zone": "Europe/Berlin",
+      "utc": "2026-03-29T00:59:00.000Z",
+      "local": "2026-03-29 01:59 Europe/Berlin",
+      "note": "last minute before the gap"
+    },
+    {
+      "input": "2026-03-29 02:00",
+      "zone": "Europe/Berlin",
+      "error": "nonexistent_local_time",
+      "message": "Start: 2026-03-29 02:00 does not exist in Europe/Berlin, because the clocks go forward at that time. Use a later time, or give the time with an offset.",
+      "note": "first minute of the gap"
+    },
+    {
+      "input": "2026-03-29 02:30",
+      "zone": "Europe/Berlin",
+      "error": "nonexistent_local_time",
+      "message": "Start: 2026-03-29 02:30 does not exist in Europe/Berlin, because the clocks go forward at that time. Use a later time, or give the time with an offset.",
+      "note": "inside the gap"
+    },
+    {
+      "input": "29.03.2026 02:59:59",
+      "zone": "Europe/Berlin",
+      "error": "nonexistent_local_time",
+      "message": "Start: 29.03.2026 02:59:59 does not exist in Europe/Berlin, because the clocks go forward at that time. Use a later time, or give the time with an offset.",
+      "note": "last second of the gap, dotted form"
+    },
+    {
+      "input": "2026-03-29 03:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-03-29T01:00:00.000Z",
+      "local": "2026-03-29 03:00 Europe/Berlin",
+      "note": "first minute after the gap"
+    },
+    {
+      "input": "2026-03-29T02:30:00+01:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-03-29T01:30:00.000Z",
+      "local": "2026-03-29 03:30 Europe/Berlin",
+      "note": "an offset makes a gap time exact"
+    },
+    {
+      "input": "2026-10-25 01:59",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-24T23:59:00.000Z",
+      "local": "2026-10-25 01:59 Europe/Berlin",
+      "note": "before the repeated hour"
+    },
+    {
+      "input": "2026-10-25 02:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-25T00:00:00.000Z",
+      "local": "2026-10-25 02:00 Europe/Berlin",
+      "note": "repeated: the earlier instant (CEST)"
+    },
+    {
+      "input": "2026-10-25 02:30",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-25T00:30:00.000Z",
+      "local": "2026-10-25 02:30 Europe/Berlin",
+      "note": "repeated: the earlier instant (CEST)"
+    },
+    {
+      "input": "25.10.2026 02:59:59",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-25T00:59:59.000Z",
+      "local": "2026-10-25 02:59:59 Europe/Berlin",
+      "note": "repeated: last second, dotted form"
+    },
+    {
+      "input": "2026-10-25 03:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-25T02:00:00.000Z",
+      "local": "2026-10-25 03:00 Europe/Berlin",
+      "note": "after the repeated hour (CET)"
+    },
+    {
+      "input": "2026-10-25T02:30:00+01:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-25T01:30:00.000Z",
+      "local": "2026-10-25 02:30 Europe/Berlin",
+      "note": "an offset picks the later instant"
+    },
+    {
+      "input": "2026-07-15 10:00",
+      "zone": "Australia/Sydney",
+      "utc": "2026-07-15T00:00:00.000Z",
+      "local": "2026-07-15 10:00 Australia/Sydney",
+      "note": "winter (AEST, +10:00)"
+    },
+    {
+      "input": "2026-12-15 10:00",
+      "zone": "Australia/Sydney",
+      "utc": "2026-12-14T23:00:00.000Z",
+      "local": "2026-12-15 10:00 Australia/Sydney",
+      "note": "summer (AEDT, +11:00), the UTC date is the day before"
+    },
+    {
+      "input": "2026-10-04 02:30",
+      "zone": "Australia/Sydney",
+      "error": "nonexistent_local_time",
+      "message": "Start: 2026-10-04 02:30 does not exist in Australia/Sydney, because the clocks go forward at that time. Use a later time, or give the time with an offset.",
+      "note": "spring change in October"
+    },
+    {
+      "input": "2026-10-04 03:00",
+      "zone": "Australia/Sydney",
+      "utc": "2026-10-03T16:00:00.000Z",
+      "local": "2026-10-04 03:00 Australia/Sydney",
+      "note": "first minute after the gap"
+    },
+    {
+      "input": "2026-04-05 02:30",
+      "zone": "Australia/Sydney",
+      "utc": "2026-04-04T15:30:00.000Z",
+      "local": "2026-04-05 02:30 Australia/Sydney",
+      "note": "autumn change in April: the earlier instant (AEDT)"
+    },
+    {
+      "input": "2026-11-01 01:30",
+      "zone": "America/New_York",
+      "utc": "2026-11-01T05:30:00.000Z",
+      "local": "2026-11-01 01:30 America/New_York",
+      "note": "repeated hour west of UTC: the earlier instant (EDT)"
+    },
+    {
+      "input": "2026-03-08 02:30",
+      "zone": "America/New_York",
+      "error": "nonexistent_local_time",
+      "message": "Start: 2026-03-08 02:30 does not exist in America/New_York, because the clocks go forward at that time. Use a later time, or give the time with an offset.",
+      "note": "gap west of UTC"
+    },
+    {
+      "input": "2026-10-04 02:15",
+      "zone": "Australia/Lord_Howe",
+      "error": "nonexistent_local_time",
+      "message": "Start: 2026-10-04 02:15 does not exist in Australia/Lord_Howe, because the clocks go forward at that time. Use a later time, or give the time with an offset.",
+      "note": "a gap of 30 minutes"
+    },
+    {
+      "input": "2026-04-05 01:45",
+      "zone": "Australia/Lord_Howe",
+      "utc": "2026-04-04T14:45:00.000Z",
+      "local": "2026-04-05 01:45 Australia/Lord_Howe",
+      "note": "a repeated half hour: the earlier instant (+11:00)"
+    },
+    {
+      "input": "2026-10-27 10:00",
+      "zone": "Asia/Kathmandu",
+      "utc": "2026-10-27T04:15:00.000Z",
+      "local": "2026-10-27 10:00 Asia/Kathmandu",
+      "note": "offset of +05:45"
+    },
+    {
+      "input": "2026-10-27 10:00",
+      "zone": "UTC",
+      "utc": "2026-10-27T10:00:00.000Z",
+      "local": "2026-10-27 10:00 UTC",
+      "note": "UTC"
+    },
+    {
+      "input": "2026-03-29 02:30",
+      "zone": "UTC",
+      "utc": "2026-03-29T02:30:00.000Z",
+      "local": "2026-03-29 02:30 UTC",
+      "note": "no gap in UTC"
+    },
+    {
+      "input": "2028-02-29 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2028-02-29T09:00:00.000Z",
+      "local": "2028-02-29 10:00 Europe/Berlin",
+      "note": "leap day"
+    },
+    {
+      "input": "29.02.2027 10:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 29.02.2027 10:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "2027 is not a leap year"
+    },
+    {
+      "input": "2100-02-29 10:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 2100-02-29 10:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "2100 is not a leap year"
+    },
+    {
+      "input": "2000-02-29 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2000-02-29T09:00:00.000Z",
+      "local": "2000-02-29 10:00 Europe/Berlin",
+      "note": "2000 is a leap year"
+    },
+    {
+      "input": "31.12.2026 23:59",
+      "zone": "Europe/Berlin",
+      "utc": "2026-12-31T22:59:00.000Z",
+      "local": "2026-12-31 23:59 Europe/Berlin",
+      "note": "end of the year"
+    },
+    {
+      "input": "01.01.2027 00:30",
+      "zone": "Europe/Berlin",
+      "utc": "2026-12-31T23:30:00.000Z",
+      "local": "2027-01-01 00:30 Europe/Berlin",
+      "note": "the UTC year is the year before"
+    },
+    {
+      "input": "2026-12-31T23:30:00-01:00",
+      "zone": "Europe/Berlin",
+      "utc": "2027-01-01T00:30:00.000Z",
+      "local": "2027-01-01 01:30 Europe/Berlin",
+      "note": "an offset moves the instant into the next year"
+    },
+    {
+      "input": "30.04.2026 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-04-30T08:00:00.000Z",
+      "local": "2026-04-30 10:00 Europe/Berlin",
+      "note": "end of a 30-day month"
+    },
+    {
+      "input": "31.10.2026 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-31T09:00:00.000Z",
+      "local": "2026-10-31 10:00 Europe/Berlin",
+      "note": "end of a 31-day month"
+    },
+    {
+      "input": "tomorrow 3pm",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "natural language"
+    },
+    {
+      "input": "2026-10-27",
+      "zone": "Europe/Berlin",
+      "error": "missing_time",
+      "message": "Start: 2026-10-27 has a date but no time. Add the time, for example 2026-10-27 10:00.",
+      "note": "ISO date without a time"
+    },
+    {
+      "input": "2026/10/27 10:00",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "year first with slashes"
+    },
+    {
+      "input": "27-10-2026 10:00",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "day first with dashes"
+    },
+    {
+      "input": "20261027T100000Z",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "ISO 8601 basic format"
+    },
+    {
+      "input": "10:00",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "a time without a date"
+    },
+    {
+      "input": "27.10.2026 10",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "an hour without minutes"
+    },
+    {
+      "input": "Oct 27, 2026 10:00 AM",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "English month name"
+    },
+    {
+      "input": "27.10.2026 10:00 Uhr",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "a word after the time"
+    },
+    {
+      "input": "2026-10-27T10:00:00,5",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "a comma as the decimal sign"
+    },
+    {
+      "input": "2026-10-27 10:00 PM",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "12-hour clock"
+    },
+    {
+      "input": "0000-01-01 10:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 0000-01-01 10:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "year 0, before 1971"
+    },
+    {
+      "input": "27.10.0026 10:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 27.10.0026 10:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "a two-digit year padded to four digits"
+    },
+    {
+      "input": "1971-01-01 00:30",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 1971-01-01 00:30 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "a valid wall time whose instant is in 1970"
+    },
+    {
+      "input": "1971-01-01 01:30",
+      "zone": "Europe/Berlin",
+      "utc": "1971-01-01T00:30:00.000Z",
+      "local": "1971-01-01 01:30 Europe/Berlin",
+      "note": "the first instants of 1971 are accepted"
+    },
+    {
+      "input": "9999-12-31T23:30:00-01:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 9999-12-31T23:30:00-01:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "the instant is in year 10000"
+    },
+    {
+      "input": "9999-12-31 23:59:59",
+      "zone": "UTC",
+      "utc": "9999-12-31T23:59:59.000Z",
+      "local": "9999-12-31 23:59:59 UTC",
+      "note": "the last accepted second"
+    },
+    {
+      "input": "1971-06-01 10:00",
+      "zone": "Africa/Monrovia",
+      "utc": "1971-06-01T10:44:30.000Z",
+      "local": "1971-06-01 10:00 Africa/Monrovia",
+      "note": "an offset with seconds (-00:44:30) is exact"
+    },
+    {
+      "input": "2026-10-27T10:00:00+14:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-26T20:00:00.000Z",
+      "local": "2026-10-26 21:00 Europe/Berlin",
+      "note": "the largest offset"
+    },
+    {
+      "input": "2026-10-27T10:00:00-12:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T22:00:00.000Z",
+      "local": "2026-10-27 23:00 Europe/Berlin",
+      "note": "the smallest offset"
+    },
+    {
+      "input": "2026-10-27T10:00:00+15:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 2026-10-27T10:00:00+15:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "above +14:00"
+    },
+    {
+      "input": "2026-10-27T10:00:00-12:30",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 2026-10-27T10:00:00-12:30 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "below -12:00"
+    },
+    {
+      "input": "2026-10-27 10:00-13:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 2026-10-27 10:00-13:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "a time range, not an offset"
+    },
+    {
+      "input": "2026-10-27 10:00-11:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T21:00:00.000Z",
+      "local": "2026-10-27 22:00 Europe/Berlin",
+      "note": "a range that ends at 11:00 reads as the offset -11:00; the local text shows it"
+    },
+    {
+      "input": "2026-10-27T10:00:00\u221205:00",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "U+2212 (minus sign) is not a hyphen-minus"
+    },
+    {
+      "input": "1793091600.123456789",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.123Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "a fraction of Unix seconds is cut to milliseconds"
+    },
+    {
+      "input": "1793091600000.5",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "Unix milliseconds take no fraction"
+    },
+    {
+      "input": "1000000000",
+      "zone": "UTC",
+      "utc": "2001-09-09T01:46:40.000Z",
+      "local": "2001-09-09 01:46:40 UTC",
+      "note": "the smallest Unix seconds"
+    },
+    {
+      "input": "1000000000000",
+      "zone": "UTC",
+      "utc": "2001-09-09T01:46:40.000Z",
+      "local": "2001-09-09 01:46:40 UTC",
+      "note": "the smallest Unix milliseconds"
+    },
+    {
+      "input": "9999999999",
+      "zone": "UTC",
+      "utc": "2286-11-20T17:46:39.000Z",
+      "local": "2286-11-20 17:46:39 UTC",
+      "note": "the largest Unix seconds"
+    },
+    {
+      "input": "9999999999999",
+      "zone": "UTC",
+      "utc": "2286-11-20T17:46:39.999Z",
+      "local": "2286-11-20 17:46:39 UTC",
+      "note": "the largest Unix milliseconds"
+    },
+    {
+      "input": "2026102710",
+      "zone": "UTC",
+      "utc": "2034-03-16T06:18:30.000Z",
+      "local": "2034-03-16 06:18:30 UTC",
+      "note": "known limit (2.4): ten digits are Unix time, also a compact date and hour"
+    },
+    {
+      "input": "00/10/2026 10:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 00/10/2026 10:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "a part of 0 is not ambiguous; no such date"
+    },
+    {
+      "input": "27.10.2026,10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "a comma without a space"
+    },
+    {
+      "input": "27.10.2026\u00a010:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "U+00A0 (no-break space)"
+    },
+    {
+      "input": "2026-10-27\t10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "a tab"
+    },
+    {
+      "input": "2026-10-27\u202f10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "U+202F (narrow no-break space)"
+    },
+    {
+      "input": "\ufeff2026-10-27 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-27T09:00:00.000Z",
+      "local": "2026-10-27 10:00 Europe/Berlin",
+      "note": "a leading U+FEFF (byte order mark)"
+    },
+    {
+      "input": "2026-10-27 10:00\u200b",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "U+200B (zero-width space) is not white space"
+    },
+    {
+      "input": "29.02.2028 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2028-02-29T09:00:00.000Z",
+      "local": "2028-02-29 10:00 Europe/Berlin",
+      "note": "leap day, dotted form"
+    },
+    {
+      "input": "02/29/2028 10:00",
+      "zone": "Europe/Berlin",
+      "utc": "2028-02-29T09:00:00.000Z",
+      "local": "2028-02-29 10:00 Europe/Berlin",
+      "note": "leap day, month first"
+    },
+    {
+      "input": "29/02/2027 10:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 29/02/2027 10:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "day first; 2027 is not a leap year"
+    },
+    {
+      "input": "2026-10-27T24:00:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 2026-10-27T24:00:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "24:00 refused in the ISO form too"
+    },
+    {
+      "input": "2026-10-27 10:00 Europe/Berlin",
+      "zone": "Europe/Berlin",
+      "error": "unrecognized",
+      "message": "Start is not a valid date and time. Use 2026-10-27 10:00 or 27.10.2026 10:00 (local time), 2026-10-27T10:00:00+01:00 (with an offset), 27/10/2026 10:00 or 10/27/2026 10:00 (only when the day is above 12), or Unix time in seconds or milliseconds.",
+      "note": "the local text of an output is not an input (5.1)"
+    },
+    {
+      "input": "2026-09-27 02:45",
+      "zone": "Pacific/Chatham",
+      "error": "nonexistent_local_time",
+      "message": "Start: 2026-09-27 02:45 does not exist in Pacific/Chatham, because the clocks go forward at that time. Use a later time, or give the time with an offset.",
+      "note": "first minute of the gap, a zone at +12:45"
+    },
+    {
+      "input": "2026-09-27 03:44",
+      "zone": "Pacific/Chatham",
+      "error": "nonexistent_local_time",
+      "message": "Start: 2026-09-27 03:44 does not exist in Pacific/Chatham, because the clocks go forward at that time. Use a later time, or give the time with an offset.",
+      "note": "last minute of the gap"
+    },
+    {
+      "input": "2026-09-27 03:45",
+      "zone": "Pacific/Chatham",
+      "utc": "2026-09-26T14:00:00.000Z",
+      "local": "2026-09-27 03:45 Pacific/Chatham",
+      "note": "first minute after the gap (+13:45)"
+    },
+    {
+      "input": "2026-04-05 03:30",
+      "zone": "Pacific/Chatham",
+      "utc": "2026-04-04T13:45:00.000Z",
+      "local": "2026-04-05 03:30 Pacific/Chatham",
+      "note": "repeated: the earlier instant (+13:45)"
+    },
+    {
+      "input": "2026-04-05 03:45",
+      "zone": "Pacific/Chatham",
+      "utc": "2026-04-04T15:00:00.000Z",
+      "local": "2026-04-05 03:45 Pacific/Chatham",
+      "note": "after the repeated time (+12:45)"
+    },
+    {
+      "input": "2026-09-06 00:00",
+      "zone": "America/Santiago",
+      "error": "nonexistent_local_time",
+      "message": "Start: 2026-09-06 00:00 does not exist in America/Santiago, because the clocks go forward at that time. Use a later time, or give the time with an offset.",
+      "note": "the clocks skip midnight"
+    },
+    {
+      "input": "2026-09-06 01:00",
+      "zone": "America/Santiago",
+      "utc": "2026-09-06T04:00:00.000Z",
+      "local": "2026-09-06 01:00 America/Santiago",
+      "note": "first hour after the gap (-03:00)"
+    },
+    {
+      "input": "2026-04-04 23:30",
+      "zone": "America/Santiago",
+      "utc": "2026-04-05T02:30:00.000Z",
+      "local": "2026-04-04 23:30 America/Santiago",
+      "note": "repeated hour before midnight: the earlier instant (-03:00)"
+    },
+    {
+      "input": "2026-11-01 01:30",
+      "zone": "America/St_Johns",
+      "utc": "2026-11-01T04:00:00.000Z",
+      "local": "2026-11-01 01:30 America/St_Johns",
+      "note": "repeated hour at -02:30 and -03:30: the earlier instant"
+    },
+    {
+      "input": "2026-03-28 02:30",
+      "zone": "Europe/Berlin",
+      "utc": "2026-03-28T01:30:00.000Z",
+      "local": "2026-03-28 02:30 Europe/Berlin",
+      "note": "the day before the gap"
+    },
+    {
+      "input": "2026-03-30 02:30",
+      "zone": "Europe/Berlin",
+      "utc": "2026-03-30T00:30:00.000Z",
+      "local": "2026-03-30 02:30 Europe/Berlin",
+      "note": "the day after the gap"
+    },
+    {
+      "input": "2026-10-24 02:30",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-24T00:30:00.000Z",
+      "local": "2026-10-24 02:30 Europe/Berlin",
+      "note": "the day before the repeated hour"
+    },
+    {
+      "input": "2026-10-26 02:30",
+      "zone": "Europe/Berlin",
+      "utc": "2026-10-26T01:30:00.000Z",
+      "local": "2026-10-26 02:30 Europe/Berlin",
+      "note": "the day after the repeated hour"
+    },
+    {
+      "input": "05/10/0026 10:00",
+      "zone": "Europe/Berlin",
+      "error": "out_of_range",
+      "message": "Start: 05/10/0026 10:00 is out of range. Check the year, the day, the month, the time and the offset.",
+      "note": "the year check comes before the ambiguity check, so no refused year is suggested (2.7)"
+    }
+  ],
+  "timeZones": [
+    {
+      "input": "Europe/Berlin",
+      "name": "Europe/Berlin",
+      "note": "a canonical name"
+    },
+    {
+      "input": "europe/berlin",
+      "name": "Europe/Berlin",
+      "note": "case fixed"
+    },
+    {
+      "input": "UTC",
+      "name": "UTC",
+      "note": "UTC"
+    },
+    {
+      "input": "utc",
+      "name": "UTC",
+      "note": "UTC in lowercase, case fixed"
+    },
+    {
+      "input": "Etc/UTC",
+      "name": "Etc/UTC",
+      "note": "an Etc name is kept as given"
+    },
+    {
+      "input": "Asia/Calcutta",
+      "name": "Asia/Calcutta",
+      "note": "an alias; Intl accepts it"
+    },
+    {
+      "input": "Etc/GMT-1",
+      "name": "Etc/GMT-1",
+      "note": "accepted; the tz database inverts the sign: UTC+01:00"
+    },
+    {
+      "input": "Europe/Berlni",
+      "error": "invalid_time_zone",
+      "note": "Intl refuses it"
+    },
+    {
+      "input": "Berlin",
+      "error": "invalid_time_zone",
+      "note": "a city without its region"
+    },
+    {
+      "input": "GMT+1",
+      "error": "invalid_time_zone",
+      "note": "Intl refuses it"
+    },
+    {
+      "input": "+01:00",
+      "error": "invalid_time_zone",
+      "note": "an offset is not a time zone; the name pattern refuses it"
+    }
+  ]
+}

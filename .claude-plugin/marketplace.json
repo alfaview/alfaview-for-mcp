@@ -1,0 +1,16 @@
+{
+  "name": "alfaview",
+  "description": "Claude Code plugins for alfaview.",
+  "owner": {
+    "name": "alfaview Video Conferencing Systems GmbH & Co. KG",
+    "email": "support@alfaview.com",
+    "url": "https://www.alfaview.com"
+  },
+  "plugins": [
+    {
+      "name": "alfaview-mcp",
+      "source": "./plugins/alfaview-mcp",
+      "description": "The plugin runs the alfaview MCP server and adds a skill for the tasks of an alfaview company."
+    }
+  ]
+}

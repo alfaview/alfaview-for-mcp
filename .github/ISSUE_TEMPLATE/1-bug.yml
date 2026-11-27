@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a problem with the server.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Never paste an API key, an access token or a configuration file into this form. Other people can read each issue.
+
+        Report a vulnerability as the [security policy](https://github.com/alfaview/alfaview-for-mcp/security/policy) describes, not in an issue.
+  - type: input
+    id: version
+    attributes:
+      label: Version of the server
+      description: The version that shows the problem. The first line of the log names it.
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: MCP client and its version
+      description: The AI assistant that starts the server, such as Claude Code, Claude Desktop or Cursor, and its version. In Claude Code, `claude --version` shows the version.
+    validations:
+      required: true
+  - type: textarea
+    id: settings
+    attributes:
+      label: Settings
+      description: The access level, the option Personal data and the time zone of the server entry, and ALFAVIEW_TOOLS when you set it. The first line of the log names the first three. Write the values, not the server entry.
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: The steps that show the problem, the result that you expect and the result that you get.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log lines
+      description: The lines of the log around the problem. [Troubleshooting](https://github.com/alfaview/alfaview-for-mcp/blob/main/docs/troubleshooting.md) says where each client writes the log. Replace each name and each email address with a placeholder.
+      render: text

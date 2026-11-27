@@ -1,0 +1,5 @@
+{
+  "title": "Unauthorized",
+  "status": 401,
+  "detail": "An invalid access token was provided in the Authorization header."
+}

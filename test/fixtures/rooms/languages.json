@@ -1,0 +1,9 @@
+{
+  "transcription": ["en-US", "de-DE", "fr-FR", "es-ES", "it-IT", "de-DE"],
+  "translation": [
+    { "in": "de-DE", "out": ["en-US", "fr-FR"] },
+    { "in": "en-US", "out": ["de-DE", "fr-FR", "es-ES", "ja-JP"] },
+    { "in": "fr-FR", "out": ["de-DE", "en-US"] },
+    { "in": "es-ES", "out": null }
+  ]
+}
